@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Kolejka'
   ClientHeight = 322
   ClientWidth = 523
   Color = clBtnFace
@@ -15,7 +15,7 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 48
+    Left = 32
     Top = 32
     Width = 113
     Height = 49
@@ -24,11 +24,11 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 48
+    Left = 32
     Top = 216
     Width = 113
     Height = 49
-    Caption = 'Usu'#324' z listy'
+    Caption = 'Usu'#324' z kolejki'
     TabOrder = 1
     OnClick = Button2Click
   end
@@ -41,11 +41,12 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Edit1: TEdit
-    Left = 184
-    Top = 48
-    Width = 89
+    Left = 176
+    Top = 46
+    Width = 113
     Height = 21
     TabOrder = 3
+    OnKeyPress = Edit1KeyPress
   end
   object Button3: TButton
     Left = 312
@@ -57,7 +58,7 @@ object Form1: TForm1
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 48
+    Left = 32
     Top = 120
     Width = 113
     Height = 49

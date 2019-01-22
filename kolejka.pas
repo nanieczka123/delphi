@@ -32,6 +32,7 @@ procedure Button2Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
 end;
 type
 wskaznik_kolejki = ^skladnik_kolejki;
@@ -77,6 +78,7 @@ end;
 procedure ZKolejki (var poczatek_kolejki: wskaznik_kolejki);
 var punkt: wskaznik_kolejki;
 begin
+a:=false;
 if poczatek_kolejki<>nil then
 begin
 with poczatek_kolejki^ do
@@ -91,11 +93,24 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 y:=edit1.Text;
+Edit1.Clear;
 if Length(y)<>0 then
 begin
 DoKolejki(y,x);
 ListBox1.Items.Add(y);
 end;
+end;
+
+procedure TForm1.Edit1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+  begin
+    Key := #0;
+    y := Edit1.Text;
+    Edit1.Clear;
+    DoKolejki(y,x);
+    ListBox1.Items.Add(y);
+  end;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -180,7 +195,7 @@ begin
 if ListBox1.Items.Count<>0 then
 begin
 msg:='Nie zapisano, czy na pewno chcesz wyjœæ?';
-if MessageDlg(msg, mtConfirmation, [mbOk, mbCancel], 0) = mrCancel then
+if MessageDlg(msg, mtWarning, [mbOk, mbCancel], 0) = mrCancel then
     CanClose := false;
 end;
 end;
