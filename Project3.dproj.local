@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.914,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\kolejka.pas=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\kolejka2.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.478,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.456,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\kolejka.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.425,=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.395,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.538,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project3.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.412,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project3.dproj=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.456,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\kolejka.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.914,C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\kolejka.dfm=C:\Users\Antonina\Documents\Embarcadero\Studio\Projects\kolejka2.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
