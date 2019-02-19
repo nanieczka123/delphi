@@ -1,0 +1,66 @@
+library Project2;
+
+{ Important note about DLL memory management: ShareMem must be the
+  first unit in your library's USES clause AND your project's (select
+  Project-View Source) USES clause if your DLL exports any procedures or
+  functions that pass strings as parameters or function results. This
+  applies to all strings passed to and from your DLL--even those that
+  are nested in records and classes. ShareMem is the interface unit to
+  the BORLNDMM.DLL shared memory manager, which must be deployed along
+  with your DLL. To avoid using BORLNDMM.DLL, pass string information
+  using PChar or ShortString parameters. }
+
+uses
+  System.SysUtils,
+  System.Classes;
+
+{$R *.res}
+
+type
+wskaznik_kolejki = ^skladnik_kolejki;
+
+skladnik_kolejki = record
+wartosc: string;
+wskaznik: wskaznik_kolejki
+end;
+
+var
+dane: string;
+a: boolean;
+
+procedure DoKolejki (var element: string; var koniec_kolejki: wskaznik_kolejki);
+var punkt: wskaznik_kolejki;
+begin
+a:=false;
+punkt:=koniec_kolejki;
+New(koniec_kolejki);
+with koniec_kolejki^ do
+begin
+dane:= element;
+wskaznik:=nil
+end;
+if punkt<>nil then
+punkt^.wskaznik:=koniec_kolejki
+end;
+
+procedure ZKolejki (var poczatek_kolejki: wskaznik_kolejki);
+var punkt: wskaznik_kolejki;
+begin
+a:=false;
+if poczatek_kolejki<>nil then
+begin
+with poczatek_kolejki^ do
+begin
+punkt:=wskaznik
+end;
+Dispose (poczatek_kolejki);
+poczatek_kolejki:=punkt
+end
+end;
+
+exports
+DoKolejki,
+ZKolejki;
+
+begin
+end.
